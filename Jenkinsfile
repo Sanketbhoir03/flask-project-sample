@@ -3,12 +3,11 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                // Clone your Git repository
-                git 'https://github.com/Sanketbhoir03/flask-project-sample.git'
-
-            }
-        }
+    steps {
+        // Clone your Git repository, specifying the 'main' branch
+        git branch: 'main', url: 'https://github.com/Sanketbhoir03/flask-project-sample.git'
+    }
+}
 
         stage('Setup Python') {
             steps {
